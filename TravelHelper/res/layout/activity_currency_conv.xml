@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    tools:context=".TranslatorActivity" >
+
+    <LinearLayout
+        android:id="@+id/topLayout_curconv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:weightSum="100" >
+
+        <Spinner
+            android:id="@+id/in_lang_curconv_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="48"
+            android:spinnerMode="dropdown"
+            android:entries="@array/Currencies" />
+
+        <ImageButton
+            android:id="@+id/switch_curconv_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:contentDescription="@string/switch_curconv_btn"
+            android:src="@drawable/ic_swap_enabled" />
+
+
+        <Spinner
+            android:id="@+id/out_lang_curconv_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="48"
+            android:spinnerMode="dropdown"
+            android:entries="@array/Currencies" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/in_text_curconv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/do_curconv_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/topLayout_curconv"
+        android:ems="10"
+        android:gravity="right|center_vertical"
+        android:textAlignment="gravity"
+        android:text="1"
+        android:inputType="numberDecimal" >
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/out_text_curconv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/do_curconv_btn"
+        android:ems="10"
+        android:editable="false"
+        android:gravity="right|center_vertical"
+        android:textAlignment="gravity"
+        android:inputType="none" >
+
+    </EditText>
+
+    <Button
+        android:id="@+id/do_curconv_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/do_curconv_btn" />
+
+</RelativeLayout>

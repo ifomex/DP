@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false">//&key=AIzaSyCCGFHBz-kkdr5AU5ZCOUDJcOaRixyUM2I</script> 
+    <script>
+	var map;
+    var markers = [];
+    var infoWindow;
+    var locationSelect;
+	var activities;
+	var sidebar_html = "<table><tr width=304><td><img src=\"%s\" width=\"32\" height=\"32\"/></td>"
+					+"<td width=100 style=\"font-size:x-large; font-weight: bold\"> %s </td><td>"+
+					"<table width=200px><tr><td>%s</td></tr>"+
+					"<tr><td style=\"font-size:medium; width:200px\">%s - %s</td></tr></table>"+
+				"</td></tr></table>";
+	var infowin_html = "<table><tr><td><img src=\"%s\" width=\"32\" height=\"32\" style=\"display:inline;\" />"
+					+"<div width=100 style=\"font-size:x-large; font-weight: bold; display:inline;\"> %s </div> </td> </tr>"
+					+"<tr><td>%s</td></tr>"
+					+"<tr><td>%s</td></tr>"
+					+"</table>";
+
+    function load() {
+		var j_id = getUrlVars()["jid"];
+	
+		map = new google.maps.Map(document.getElementById("map"), {
+			center: new google.maps.LatLng(40, -100),
+			zoom: 4,
+			mapTypeId: 'roadmap',
+			mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU}
+		});
+		infoWindow = new google.maps.InfoWindow();
+  
+		loadDataFromDB(j_id);
+	}
+	
+	function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+	function mapClear(){
+		infoWindow.close();
+		for (var i = 0; i < markers.length; i++) {
+			markers[i].setMap(null);
+		}
+		markers.length = 0;
+	}
+	
+	function loadDataFromDB(j_id) {
+		mapClear();
+		var bounds = new google.maps.LatLngBounds();
+		
+		var sidebarTD = document.createElement("td");
+		sidebarTD.setAttribute("width","20%");
+		sidebarTD.setAttribute("valign","top");
+		var sidebarDIV = document.createElement("div");
+		sidebarDIV.id = "cm_sidebarDIV";
+		sidebarDIV.style.overflow = "auto";
+		sidebarDIV.style.height = "450px";
+		sidebarDIV.style.fontSize = "11px";
+		sidebarDIV.style.color = "#000000";
+		sidebarTD.appendChild(sidebarDIV);
+		document.getElementById("cm_mapTR").appendChild(sidebarTD);
+
+		var dUrl = 'loadFromDB.php?jid='+j_id;
+		$.getJSON(dUrl, function(data) {
+			//alert(data["name"]);
+			document.getElementById("jour_name").innerHTML = data["name"];
+			var sdate = new Date(parseFloat(data["sdate"]));
+			var edate = new Date(parseFloat(data["edate"]));
+			document.getElementById("jour_dates").innerHTML =  sdate.toLocaleDateString()+ " - " + edate.toLocaleDateString();
+			
+			activities = data["activities"];
+			for (var i in activities){
+				var acti = activities[i];
+				var name = acti["name"];
+				var latlon = new google.maps.LatLng(
+					parseFloat(acti["lat"]),
+					parseFloat(acti["lon"])
+				);
+				var stime = new Date(parseFloat(acti["stime"]));
+				var etime = new Date(parseFloat(acti["etime"]));
+				
+				var imgsrc;
+				switch(parseInt(acti["category"])){
+					case 0: imgsrc = "category_accommodation.png"; break;
+					case 1: imgsrc = "category_transport.png"; break;
+					case 2: imgsrc = "category_culture.png"; break;
+					case 3: imgsrc = "category_food.png"; break;
+					case 4: imgsrc = "category_active.png"; break;
+					case 5: imgsrc = "category_finance.png"; break;
+					case 6: imgsrc = "category_shopping.png"; break;
+					case 7: imgsrc = "category_health.png"; break;
+				}
+				var pl_name = acti["pl_name"];
+				var pl_addr = acti["address"];
+				
+				
+				createMarker(latlon, name, imgsrc, pl_name, pl_addr);
+				bounds.extend(latlon);
+				
+				var markerA = document.createElement("a");
+				markerA.setAttribute("href","javascript:cm_markerClicked('" + i +"')");
+				markerA.style.color = "#000000";
+				markerA.style.cssText = "text-size:x-large; text-weight:bold; color:#000000";
+				var sidebarText= i+ " " + acti["name"];
+				//markerA.appendChild(document.createTextNode(sidebarText));
+				markerA.innerHTML = sprintf(sidebar_html, imgsrc, name, stime.toLocaleDateString(), stime.toLocaleTimeString(), etime.toLocaleTimeString());
+				//markerA.innerHTML ="<h3>" + sidebarText + "</h3>";
+				sidebarDIV.appendChild(markerA);
+				sidebarDIV.appendChild(document.createElement("br"));
+			}
+			map.fitBounds(bounds);
+			
+		});
+		
+	}
+	
+
+    function createMarker(latlng, name, categ, pl_name, pl_addr) {
+
+		var infowin = sprintf(infowin_html, categ, name, pl_name, pl_addr);
+      var marker = new google.maps.Marker({
+        map: map,
+        position: latlng
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+        infoWindow.setContent(infowin);
+        infoWindow.open(map, marker);
+      });
+      markers.push(marker);
+    }
+
+	function sprintf(format, etc) {
+		var arg = arguments;
+		var i = 1;
+		return format.replace(/%((%)|s)/g, function (m) { return m[2] || arg[i++] })
+	}
+	
+    function cm_markerClicked(idx) {
+		var acti = activities[idx];
+		var name = acti["name"];
+		var stime = new Date(parseFloat(acti["stime"]));
+		var etime = new Date(parseFloat(acti["etime"]));
+		var imgsrc;
+		switch(parseInt(acti["category"])){
+			case 0: imgsrc = "category_accommodation.png"; break;
+			case 1: imgsrc = "category_transport.png"; break;
+			case 2: imgsrc = "category_culture.png"; break;
+			case 3: imgsrc = "category_food.png"; break;
+			case 4: imgsrc = "category_active.png"; break;
+			case 5: imgsrc = "category_finance.png"; break;
+			case 6: imgsrc = "category_shopping.png"; break;
+			case 7: imgsrc = "category_health.png"; break;
+		}
+		var pl_name = acti["pl_name"];
+		var pl_addr = acti["address"];
+				
+		var infowin = sprintf(infowin_html, imgsrc, name, pl_name, pl_addr);
+		infoWindow.setContent(infowin);
+		infoWindow.open(map, markers[idx]);
+	}
+
+    function doNothing() {}
+
+    </script>
+</head>
+<body onload="load()">
+	<div style="background-color:rgba(00,00,00,0.2" width="100%" height="110px">
+		<table> <tr>
+		<td>
+			<img src="web_hi_res_512.png" width="100" height="100" align="left"/>
+		</td>
+		<td>
+			<h1 id="jour_name"></h1>
+			<h3 id="jour_dates"></h3>
+		</td>
+		</tr></table>
+	</div>
+
+	<div style="font-family:Arial, sans-serif; font-size:11px; border:1px solid black">
+		<table id="cm_mapTABLE"> <tbody> <tr id="cm_mapTR">
+			<td width="80%"> <div id="map" style="height:720px; position:relative"></div> </td>
+		</tr> </tbody></table>
+	</div>
+
+
+</body>
+</html>

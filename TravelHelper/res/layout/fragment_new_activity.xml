@@ -1,0 +1,154 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    tools:context=".NewActivityFragment" >
+
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/new_acti_name_label"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	    <EditText
+	        android:id="@+id/nacti_name"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10"
+	        android:inputType="text" />
+	    
+		<TextView
+	        android:id="@+id/textView4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/activity_vertical_margin"
+	        android:text="@string/new_acti_categ_label"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	    <Spinner
+	        android:id="@+id/nacti_categ"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:entries="@array/array_category"
+	        android:spinnerMode="dropdown" />
+
+	    <TextView
+	        android:id="@+id/textView7"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/activity_vertical_margin"
+	        android:text="@string/new_acti_place_label"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+
+	        <ImageButton
+	            android:id="@+id/nacti_map_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:contentDescription="@string/new_acti_pmap_label"
+	            android:src="@drawable/ic_action_map" />
+
+	        <ImageButton
+	            android:id="@+id/nacti_fav_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:contentDescription="@string/new_acti_pfav_label"
+	            android:src="@drawable/ic_action_important" />
+	        
+	        <TextView 
+	            android:id="@+id/nacti_placename" 
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_marginLeft="3dp"
+	            android:gravity="center_vertical"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	    </LinearLayout>
+
+	    <TextView
+	        android:id="@+id/textView2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/activity_vertical_margin"
+	        android:text="@string/new_acti_stime_label"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	    <TimePicker
+	        android:id="@+id/nacti_stime"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" />
+
+	    <TextView
+	        android:id="@+id/textView3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/activity_vertical_margin"
+	        android:text="@string/new_acti_etime_label"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	    <TimePicker
+	        android:id="@+id/nacti_etime"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" />
+
+	    <TextView
+	        android:id="@+id/textView6"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/activity_vertical_margin"
+	        android:text="@string/new_acti_date_label"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	    <DatePicker
+	        android:id="@+id/nacti_date"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:calendarViewShown="false" />
+
+	    <TextView
+	        android:id="@+id/textView5"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/activity_vertical_margin"
+	        android:text="@string/new_acti_price_label"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	  <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+
+	        <EditText
+	            android:id="@+id/nacti_price"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:ems="10"
+	            android:inputType="numberDecimal" />
+
+	        <Spinner
+	            android:id="@+id/nacti_curr"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:entries="@array/Currencies"
+	            android:spinnerMode="dropdown" />
+
+	    </LinearLayout>
+
+	    <CheckBox
+	        android:id="@+id/nacti_expe_chb"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/new_acti_expe_label" />
+	</LinearLayout>
+
+</ScrollView>

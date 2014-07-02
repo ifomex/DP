@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:travelhelper="http://schemas.android.com/apk/res-auto" >
+    
+    <item android:id="@+id/menu_expe_new"
+        android:title="@string/action_expe_new"
+        android:icon="@drawable/ic_action_new"
+        travelhelper:showAsAction="ifRoom" />
+    
+    <item 
+        android:id="@+id/menu_expe_filt"
+        android:title="@string/action_expe_filt"
+        android:icon="@drawable/ic_action_filter"
+        travelhelper:showAsAction="ifRoom" />
+	
+	<item 
+        android:id="@+id/menu_expe_sum"
+        android:title="@string/action_expe_sum"
+        android:icon="@drawable/ic_action_sum"
+        travelhelper:showAsAction="ifRoom" />
+    
+    
+</menu>

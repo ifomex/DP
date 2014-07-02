@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/main_list_func"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:divider="@drawable/divider"
+        android:dividerHeight="2sp"
+         > <!-- android:entries="@array/array_main_func" -->
+
+    </ListView>
+
+</LinearLayout>

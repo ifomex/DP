@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    tools:context=".TranslatorActivity" >
+
+    <LinearLayout
+        android:id="@+id/topLayout_transl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:weightSum="100" >
+
+
+
+		<Spinner
+		    android:id="@+id/in_lang_transl_spin"
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="48"
+		    android:spinnerMode="dropdown"
+		    android:entries="@array/languages" />
+
+        <ImageButton
+            android:id="@+id/switch_transl_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:contentDescription="@string/switch_transl_btn"
+            android:src="@drawable/ic_swap_enabled" />
+
+		<Spinner
+		    android:id="@+id/out_lang_transl_spin"
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:spinnerMode="dropdown"
+		    android:layout_weight="48"
+		    android:entries="@array/languages" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/in_text_transl_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/do_transl_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/topLayout_transl"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="@string/transl_def_text"
+        android:text="" >
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/out_text_transl_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/do_transl_btn"
+        android:ems="10"
+        android:editable="false"
+        android:inputType="none" >
+
+    </EditText>
+<!--  android:enabled="false"-->
+
+    <Button
+        android:id="@+id/do_transl_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/do_transl_btn" />
+
+</RelativeLayout>

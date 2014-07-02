@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:travelhelper="http://schemas.android.com/apk/res-auto" >
+    <item android:id="@+id/menu_jour_new"
+        android:title="@string/action_jour_new"
+        android:icon="@drawable/ic_action_new"
+        travelhelper:showAsAction="always" />
+    
+    <item android:id="@+id/menu_jour_restore"
+        android:title="@string/action_jour_restore"
+        android:icon="@drawable/ic_action_refresh"
+        travelhelper:showAsAction="ifRoom" >
+        <menu>
+            <item android:id="@+id/menu_jour_restore_local"
+                android:title="@string/action_jour_restore_local"
+                android:icon="@drawable/ic_action_sd_storage" />
+            
+		    <item android:id="@+id/menu_jour_restore_gdrive"
+		        android:title="@string/action_jour_restore_gdrive"
+		        android:icon="@drawable/drive_icon"
+		         />
+		</menu>
+    </item>
+</menu>

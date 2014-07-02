@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+		xmlns:travelhelper="http://schemas.android.com/apk/res-auto" >
+		
+    <item android:id="@+id/menu_daypl_new"
+        android:title="@string/action_daypl_new"
+        android:icon="@drawable/ic_action_new"
+        travelhelper:showAsAction="always" />
+
+	
+	
+	<item android:id="@+id/menu_daypl_share"
+	    android:title="@string/action_daypl_share"
+	    android:icon="@drawable/ic_action_share"
+	    travelhelper:showAsAction="ifRoom" >
+	    <menu>
+	        
+	        <item android:id="@+id/menu_daypl_gpshare"
+	             android:icon="@drawable/common_signin_btn_icon_dark"
+	             android:title="Google +" />
+	        
+	        <item android:id="@+id/menu_daypl_fashare"
+	            android:icon="@drawable/com_facebook_inverse_icon"
+	            android:title="Facebook" />
+	        
+	    </menu>
+	    
+	</item>
+	
+</menu>

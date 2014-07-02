@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:travelhelper="http://schemas.android.com/apk/res-auto" >
+
+    
+    
+    <item android:id="@+id/menu_map_filter"
+         android:title="@string/action_map_filter"
+         android:icon="@drawable/ic_action_place_type"
+         travelhelper:showAsAction="always" ></item>
+    	<!-- 
+         android:icon="@drawable/ic_action_sort_by_size"
+          -->
+	<item
+        android:id="@+id/menu_map_type"
+        android:icon="@drawable/ic_action_map_layers"
+        android:title="@string/action_map_type"
+        travelhelper:showAsAction="ifRoom" />
+	
+</menu>

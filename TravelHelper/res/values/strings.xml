@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TravelHelper</string>
+    <string name="facebookAppId">567933133305459</string>
+    
+    <!-- Main activity -->
+    <string-array name="array_main_func">
+        <item>Journey diary</item>
+        <item>Near places</item>
+        <item>Transtalor</item>
+        <item>Currency converter</item>
+        <item>Expenses</item>
+        <item>Packing list</item>
+    </string-array>
+    
+    <!-- Transtator activity -->
+    <string name="title_activity_translator">Translator</string>
+    <string name="do_transl_btn">Translate</string>
+    <string name="switch_transl_btn">Switch languages</string>
+    <string name="transl_lang_warning">Select proper output language</string>
+    <string name="transl_def_text">Type text here</string>
+    
+    <!-- Currency Converter activity -->
+    <string name="title_activity_currency_conv">Currency Converter</string>
+    <string name="switch_curconv_btn">Switch currency</string>
+    <string name="do_curconv_btn">Convert</string>
+    <string name="curconv_connection_error">No network connection aviliable</string>
+    
+    <!-- Near/New Places -->
+    <string name="title_activity_map">Places</string>
+    <string name="title_fragment_new_place">New place</string>
+    <string name="plac_map_lay_dial_title">Map layer</string>
+    <string name="plac_type_dial_title">Places type\'s</string>
+    <string name="plac_type_dial_ok">OK</string>
+    <string name="pldetail_title">Place detail</string>
+    <string name="pldetail_name_label">Name</string>
+    <string name="pldetail_adress_lable">Address</string>
+    <string name="pldetail_rating_lable">Rating</string>
+    <string name="pldetail_web_btn">Web</string>
+    <string name="pldetail_fav_btn">Add to favorite</string>
+    <string name="pldetail_sha_btn">Share</string>
+    <string name="pldetail_ok_btn">OK</string>
+    <string name="pldetail_sel_btn">Select</string>
+    <string name="pldetail_can_btn">Cancel</string>
+    <string name="pldetail_fav_toast1">Place</string>
+    <string name="pldetail_fav_toast2">saved</string>
+    <string name="plac_share_title1">I visit place: </string>
+    <string name="plac_share_title2">with application Travel Helper</string>
+    
+    <string-array name="array_map_layers">
+        <item>Normal</item>
+        <item>Satellite</item>
+        <item>Terrain</item>
+        <item>Hybrid</item>
+    </string-array>
+    
+    <!-- PackList activity -->
+    <string name="title_activity_pack">Packing List</string>
+    <string name="packlst_noitem">Database is empty (add some items)</string>
+    <string name="packlst_new_item_name_dialog_title">New item</string>
+    <string name="packlst_edit_item_name_dialog_title">Edit item</string>
+    <string name="packlst_new_item_name_dialog_message">Tyme item name</string>
+    <string name="packlst_new_item_dialog_ok">OK</string>
+    
+    <!-- Menu/ActionBar actions -->
+    <string name="action_settings">Settings</string>
+    <string name="action_pack_plus">Add item</string>
+    <string name="action_pack_clear">Clear Selection</string>
+    <string name="action_map_type">Map type</string>
+    <string name="action_map_filter">Filter</string>
+    <string name="action_expe_new">Add expence</string>
+    <string name="action_expe_sum">Summary</string>
+    <string name="action_expe_filt">Filter</string>
+    <string name="action_jour_new">Add journey</string>
+    <string name="action_jour_restore">Restore</string>
+    <string name="action_jour_restore_local">SD Card</string>
+    <string name="action_jour_restore_gdrive">Google Drive</string>
+    <string name="action_daypl_new">Add activity</string>
+    <string name="action_daypl_share">Share journey</string>
+    <string name="action_done">Save</string>
+    
+
+    <string-array name="array_category">
+        <item>Accommodation</item>
+        <item>Transportation</item>
+        <item>Culture</item>
+        <item>Food &amp; Drink</item>
+        <item>Active</item>
+        <item>Finance</item>
+        <item>Shopping</item>
+        <item>Health</item>
+    </string-array>
+    <string-array name="array_pack_default_items">
+        <item>Mobile Charger</item>
+        <item>Passport</item>
+        <item>Foreign currency</item>
+        <item>Madicine</item>
+        <item>Toothbrush</item>
+        <item>Books and Magazines</item>
+        <item>Camera</item>
+        <item>Bateries</item>
+        <item>Glasses</item>
+    </string-array>
+
+    <!-- Expenses activity -->
+    <string name="title_activity_expences">Expenses</string>
+    <string name="title_activity_expences_to">Expenses: </string>
+    <string name="expe_noitem">No expenses</string>
+    <string name="expe_dial_filt_title">Filter</string>
+    <string name="expe_dial_fitl_categ_label">Category</string>
+    <string name="expe_dial_filt_date_label">Date</string>
+    <string name="expe_dial_filt_sdate">Start</string>
+    <string name="expe_dial_filt_edate">End</string>
+    <string name="expe_dial_filt_ok">OK</string>
+    <string name="expe_sum">Summary</string>
+
+    <!-- Context menu items -->
+    <string name="cmenu_edit">Edit</string>
+    <string name="cmenu_del">Delete</string>
+    <string name="cmenu_bup">Backup</string>
+    <string name="cmenu_bup_local">SD Card</string>
+    <string name="cmenu_bup_gdrive">Google Drive</string>
+    <string name="cm_del_pre_toast">Item </string>
+    <string name="cm_del_post_toast"> deleted.</string>
+    
+    <!-- New Journey fragment -->
+    <string name="title_fragment_new_journey">New Journey</string>
+    <string name="title_fragment_edit_journey">Edit Journey</string>
+    <string name="new_jour_name_label">Name</string>
+    <string name="new_jour_sdate_label">Pick start day</string>
+    <string name="new_jour_edate_label">Pick end day</string>
+    <string name="new_jour_desc_label">Description (optional)</string>
+    <string name="new_jour_name_error">Name must be filled</string>
+    
+    <!-- New Expences fragment -->
+    <string name="title_fragment_newexpence">New expense</string>
+    <string name="title_fragment_editexpence">Edit expense</string>
+    <string name="expe_new_name_label">Name</string>
+    <string name="expe_new_value_label">Value</string>
+    <string name="expe_new_curr_label">Currency</string>
+    <string name="expe_new_date_label">Pick day</string>
+    <string name="expe_new_categ_label">Pick category</string>
+    <string name="new_expe_wrogdate">Date isn\'t in journey\'s range</string>
+    <string name="new_expe_name_error">Name must be filled</string>
+    <string name="new_expe_value_error">Value isn\'t in right form</string>
+    
+    <!-- Journyes Diary activity & fragment-->
+    <string name="title_activity_diary">Journeys Diary</string>
+    <string name="title_activity_day_plan">Journey: </string>
+    <string name="jour_noitem">No jourenyes</string>
+    <string name="daypl_noitem">No activities</string>
+    <string name="daypl_tab_list">Time plan</string>
+    <string name="daypl_tab_map">Map</string>
+	<string name="acti_detail_title">Activity detail</string>
+    <string name="acti_detail_name_label">Name</string>
+    <string name="acti_dateil_datetime">Date &amp; time</string>
+    <string name="acti_detail_place_lable">Place detail</string>
+    <string name="acti_detail_rating_lable">Rating</string>
+    <string name="acti_detail_web_btn">Web</string>
+    <string name="acti_detail_fav_btn">Favorite</string>
+    <string name="acti_detail_ok_btn">OK</string>
+    <string name="acti_detail_fav_toast1">Place</string>
+    <string name="acti_detail_fav_toast2">saved</string>
+    <string name="daypl_share_text">I finished my journey </string>
+    <string name="daypl_share_text2">with application TravelHelper</string>
+    <string name="daypl_share_error">Sharing failed</string>
+    <string name="jour_backup_ok">Journey backup complete</string>
+    <string name="jour_backup_fail">Journey backup failed</string>
+    <string name="jour_restore_ok">Journey restored</string>
+    <string name="jour_restore_exist">Journey don\'t need restore</string>
+    <string name="jour_restore_fail">journey restoration failed</string>
+    <string name="jour_restor_select_file">Select file to restore</string>
+    
+    <!-- New Activities fragment -->
+    <string name="title_fragment_newactivity">New activity</string>
+    <string name="title_fragment_editactivity">Edit activity</string>
+    <string name="new_acti_name_label">Name</string>
+    <string name="new_acti_place_label">Place</string>
+    <string name="new_acti_pmap_label">from Map</string>
+    <string name="new_acti_pfav_label">from Favorites</string>
+    <string name="new_acti_stime_label">Start time</string>
+    <string name="new_acti_etime_label">End time</string>
+    <string name="new_acti_date_label">Date</string>
+    <string name="new_acti_categ_label">Category</string>
+    <string name="new_acti_price_label">Price</string>
+    <string name="new_acti_expe_label">Add as expense</string>
+    <string name="new_acit_expe_save">Expence saved</string>
+    <string name="new_acti_name_error">Name must be filled</string>
+    <string name="new_acti_date_error">Date isn\'t in journey\'s range</string>
+    <string name="new_acti_fav_dialog_title">Favorite\'s places</string>
+    <string name="new_acti_place_error">You must select place</string>
+	
+    
+
+</resources>

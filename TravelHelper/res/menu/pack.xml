@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:travelhelper="http://schemas.android.com/apk/res-auto" >
+
+  
+    
+    <item android:id="@+id/menu_pack_new" 
+        android:title="@string/action_pack_plus"
+        android:icon="@drawable/ic_action_new"
+        travelhelper:showAsAction="always" ></item>
+    
+    <item android:id="@+id/menu_pack_clear" 
+        android:title="@string/action_pack_clear"
+        android:icon="@drawable/ic_action_remove"
+        travelhelper:showAsAction="ifRoom" ></item>
+
+
+</menu>

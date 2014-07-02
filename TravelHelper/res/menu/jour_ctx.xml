@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:id="@+id/jour_cmenu_edit" 
+        android:title="@string/cmenu_edit"/>
+    
+    <item android:id="@+id/jour_cmenu_del"
+        android:title="@string/cmenu_del" />
+    
+    <item android:id="@+id/jour_cmenu_bup"
+        android:title="@string/cmenu_bup" >
+    
+        <menu >
+            <item android:id="@+id/jour_cmenu_bup_local"
+                android:title="@string/cmenu_bup_local"
+                android:icon="@drawable/ic_action_sd_storage" />
+            
+            <item android:id="@+id/jour_cmenu_bup_gdrive"
+                android:title="@string/cmenu_bup_gdrive"
+                android:icon="@drawable/drive_icon" />
+            
+        </menu>
+        
+    </item>
+    
+    <item android:id="@+id/jour_cmenu_share"
+	    android:title="@string/action_daypl_share"
+	    android:icon="@drawable/ic_action_share" >
+	    <menu>
+	        
+	        <item android:id="@+id/jour_cmenu_gpshare"
+	             android:icon="@drawable/common_signin_btn_icon_dark"
+	             android:title="Google +" />
+	        
+	        <item android:id="@+id/jour_cmenu_fashare"
+	            android:icon="@drawable/com_facebook_inverse_icon"
+	            android:title="Facebook" />
+	        
+	    </menu>
+	    
+	</item>
+
+</menu>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Čeština -->
+    
+    <string name="app_name">TravelHelper</string>
+    
+    <!-- Main activity -->
+    <string-array name="array_main_func">
+        <item>Cestovní deník</item>
+        <item>Místa v okolí</item>
+        <item>Překladač</item>
+        <item>Konvertor měn</item>
+        <item>Správa výdajů</item>
+        <item>Balící seznam</item>
+    </string-array>
+    
+    <!-- Transtator activity -->
+    <string name="title_activity_translator">Překladač</string>
+    <string name="do_transl_btn">Přelož</string>
+    <string name="switch_transl_btn">Přehození jazyků</string>
+    <string name="transl_lang_warning">Vyber jeden z nabýzených jazyků</string>
+    <string name="transl_def_text">Sem napiš text</string>
+    
+    <!-- Currency Converter activity -->
+    <string name="title_activity_currency_conv">Konvertor měn</string>
+    <string name="switch_curconv_btn">Přehození měn</string>
+    <string name="do_curconv_btn">Převeď</string>
+    <string name="curconv_connection_error">Připojení není k dispozici.</string>
+    
+    <!-- Near/New Places -->
+    <string name="title_activity_map">Místa v okolí</string>
+    <string name="title_fragment_new_place">Nové místo</string>
+    <string name="plac_map_lay_dial_title">Vrstva mapy</string>
+    <string name="plac_type_dial_title">Typ místa</string>
+    <string name="plac_type_dial_ok">OK</string>
+    <string name="pldetail_title">Detail místa</string>
+    <string name="pldetail_name_label">Jméno</string>
+    <string name="pldetail_adress_lable">Adresa</string>
+    <string name="pldetail_rating_lable">Hodnocení</string>
+    <string name="pldetail_web_btn">Web</string>
+    <string name="pldetail_fav_btn">Přidat do oblíbených</string>
+    <string name="pldetail_sha_btn">Sdílet</string>
+    <string name="pldetail_ok_btn">OK</string>
+    <string name="pldetail_sel_btn">Vybrat</string>
+    <string name="pldetail_can_btn">Zrušit</string>
+    <string name="pldetail_fav_toast1">Místo</string>
+    <string name="pldetail_fav_toast2">uloženo</string>
+    
+    <string-array name="array_map_layers">
+        <item>Normální</item>
+        <item>Satelitní</item>
+        <item>Terénní</item>
+        <item>Hybridní</item>
+    </string-array>
+    
+    <!-- PackList activity -->
+    <string name="title_activity_pack">Balící seznam</string>
+    <string name="packlst_noitem">Žádné položky</string>
+    <string name="packlst_new_item_name_dialog_title">Nová položka</string>
+    <string name="packlst_edit_item_name_dialog_title">Upravit položku</string>
+    <string name="packlst_new_item_name_dialog_message">Vyplň název položky</string>
+
+    <!-- Menu/ActionBar actions -->
+    <string name="action_settings">Nastavení</string>
+    <string name="action_pack_plus">Přidat položku</string>
+    <string name="action_pack_clear">Vymazat výběr</string>
+    <string name="action_map_type">Typ mapy</string>
+    <string name="action_map_filter">Filtr</string>
+    <string name="action_expe_new">Nový výdaj</string>
+    <string name="action_expe_sum">Součet</string>
+    <string name="action_expe_filt">Filtr</string>
+    <string name="action_jour_new">Nová cesta</string>
+    <string name="action_jour_restore">Obnovit</string>
+    <string name="action_jour_restore_local">SD Card</string>
+    <string name="action_jour_restore_gdrive">Google Drive</string>
+    <string name="action_daypl_new">Nová aktivita</string>
+    <string name="action_daypl_share">Sdílet cestu</string>
+    <string name="action_done">Uložit</string>
+    
+
+    <string-array name="array_category">
+        <item>Ubytování</item>
+        <item>Doprava</item>
+        <item>Kultura</item>
+        <item>Jídlo &amp; Pití</item>
+        <item>Aktivní</item>
+        <item>Finance</item>
+        <item>Nakupování</item>
+        <item>Zdraví</item>
+    </string-array>
+    <string-array name="array_pack_default_items">
+        <item>Nabíječka</item>
+        <item>Pas</item>
+        <item>Cizí měna</item>
+        <item>Léky</item>
+        <item>Kartáček</item>
+        <item>Knihy a časopisy</item>
+        <item>Foťák</item>
+        <item>Baterie</item>
+        <item>Brýle</item>
+    </string-array>
+
+    <!-- Expences activity -->
+    <string name="title_activity_expences">Správa výdajů</string>
+    <string name="title_activity_expences_to">Výdaje: </string>
+    <string name="expe_noitem">Žádný výdaj</string>
+    <string name="expe_dial_filt_title">Filtr</string>
+    <string name="expe_dial_fitl_categ_label">Kategorie</string>
+    <string name="expe_dial_filt_date_label">Datum</string>
+    <string name="expe_dial_filt_sdate">Začátek</string>
+    <string name="expe_dial_filt_edate">Konec</string>
+    <string name="expe_dial_filt_ok">OK</string>
+    <string name="expe_sum">Součet</string>
+
+    <!-- Context menu items -->
+    <string name="cmenu_edit">Upravit</string>
+    <string name="cmenu_del">Smazat</string>
+    <string name="cmenu_bup">Zálohovat</string>
+   	<string name="cmenu_bup_local">SD Card</string>
+    <string name="cmenu_bup_gdrive">Google Drive</string>
+    <string name="cm_del_pre_toast">Položka </string>
+    <string name="cm_del_post_toast"> smazána.</string>
+    
+    <!-- New Journey fragment -->
+    <string name="title_fragment_new_journey">Nová cesta</string>
+    <string name="title_fragment_edit_journey">Upravit cestu</string>
+    <string name="new_jour_name_label">Název</string>
+    <string name="new_jour_sdate_label">Vyber počáteční datum</string>
+    <string name="new_jour_edate_label">Vyber koncové datum</string>
+    <string name="new_jour_desc_label">Popis (nepoviný)</string>
+    <string name="new_jour_name_error">Jázev musí být vyplněn</string>
+    
+    <!-- New Expences fragment -->
+    <string name="title_fragment_newexpence">Nový výdaj</string>
+    <string name="title_fragment_editexpence">Upravit výdaj</string>
+    <string name="expe_new_name_label">Název</string>
+    <string name="expe_new_value_label">Hodnota</string>
+    <string name="expe_new_curr_label">Měna</string>
+    <string name="expe_new_date_label">Vyber datum</string>
+    <string name="expe_new_categ_label">Vyber kategorii</string>
+    <string name="new_expe_wrogdate">Datum není v rozsahu cesty</string>
+    <string name="new_expe_name_error">Název musí být vyplněn</string>
+    <string name="new_expe_value_error">Hodnota nemá správný tvar</string>
+    
+    <!-- Journyes Diary activity & fragment-->
+    <string name="title_activity_diary">Cestovní deník</string>
+    <string name="title_activity_day_plan">Cesta: </string>
+    <string name="jour_noitem">Žádná cesta</string>
+    <string name="daypl_noitem">Žádná aktivita</string>
+    <string name="daypl_tab_list">Časový plán</string>
+    <string name="daypl_tab_map">Mapa</string>
+	<string name="acti_detail_title">Detail aktivity</string>
+    <string name="acti_detail_name_label">Název</string>
+    <string name="acti_dateil_datetime">Datum a čas</string>
+    <string name="acti_detail_place_lable">Detail místa</string>
+    <string name="acti_detail_rating_lable">Hodnocení</string>
+    <string name="acti_detail_web_btn">Web</string>
+    <string name="acti_detail_fav_btn">Oblíbené</string>
+    <string name="acti_detail_ok_btn">OK</string>
+    <string name="acti_detail_fav_toast1">Místo</string>
+    <string name="acti_detail_fav_toast2">uloženo</string>
+    <string name="daypl_share_text">Dokončil jsem svoji cestu </string>
+    <string name="daypl_share_text2">s aplikací TravelHelper</string>
+    <string name="daypl_share_error">Sdílení selhalo</string>
+    <string name="jour_backup_ok">Zálohování cesty úspěšné</string>
+    <string name="jour_backup_fail">Zálohování cesty neúspěšné</string>
+    <string name="jour_restore_ok">Cesta obnovena</string>
+    <string name="jour_restore_exist">Cesta nepotřebuje obnovit</string>
+    <string name="jour_restore_fail">Obnovení cesty selhalo</string>
+    <string name="jour_restor_select_file">Vyberte soubor k obnovení</string>
+    
+    <!-- New Activities fragment -->
+    <string name="title_fragment_newactivity">Nová aktivita</string>
+    <string name="title_fragment_editactivity">Upravit aktivitu</string>
+    <string name="new_acti_name_label">Název</string>
+    <string name="new_acti_place_label">Místo</string>
+    <string name="new_acti_pmap_label">z Mapy</string>
+    <string name="new_acti_pfav_label">z Oblíbených</string>
+    <string name="new_acti_stime_label">Počáteční čas</string>
+    <string name="new_acti_etime_label">Koncový čas</string>
+    <string name="new_acti_date_label">Datum</string>
+    <string name="new_acti_categ_label">Kategorie</string>
+    <string name="new_acti_price_label">Cena</string>
+    <string name="new_acti_expe_label">Přidat jako výdaj</string>
+    <string name="new_acit_expe_save">Výdaj uložen</string>
+    <string name="new_acti_name_error">Název musí být vyplněn</string>
+    <string name="new_acti_date_error">Datum není v rozsahu cesty</string>
+    <string name="new_acti_fav_dialog_title">Oblíbená místa</string>
+    <string name="new_acti_place_error">Musíš vybrat místo</string>
+	
+    
+
+</resources>
