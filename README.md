@@ -27,4 +27,4 @@ Instalace se provádí pomocí instalačního balíčku TravelHelper.apk. Po ote
 Po schválení oprávnění a dokončení instalace je možné aplikaci používat.
 
 
-
+re
