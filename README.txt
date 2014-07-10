@@ -8,7 +8,7 @@
 
 O APLIKACI
 ----------
-Aplikace TravelHelper je implementací mobilního systému pro podporu cestování. Aplikace je navržena pro mobilní pratformu Android. Apikace sestává z několika funkcí, které jsou při cestování užitečné. Jsou jimi cestovní deník, umožňující uživateli ukládat významné momenty cesty. Aplikace tyto cesty umožňuje sdílet na sociální sítě pomocí webové aplikace. Dále je umožněno cesty zálohovat do souboru na paměť zařízení nebo na online úložiště. Další funkcí je vyhledávání zajímavých míst v okolí. Následujícími funkcemi jsou správa cestovních výdajů, překladač, konvertor měn a seznam pro balení.
+Aplikace TravelHelper je implementací mobilního systému pro podporu cestování. Aplikace je navržena pro mobilní platformu Android. Aplikace sestává z několika funkcí, které jsou při cestování užitečné. Jsou jimi cestovní deník, umožňující uživateli ukládat významné momenty cesty. Aplikace tyto cesty umožňuje sdílet na sociální sítě pomocí webové aplikace. Dále je umožněno cesty zálohovat do souboru na paměť zařízení nebo na online úložiště. Další funkcí je vyhledávání zajímavých míst v okolí. Následujícími funkcemi jsou správa cestovních výdajů, překladač, konvertor měn a seznam pro balení.
 
 
 INSTALACE A SYSTÉMOVÉ POŽADAVKY
